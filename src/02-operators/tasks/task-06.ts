@@ -13,3 +13,15 @@
  * - Discount amount
  * - Final payment
  */
+
+const chargingBill: number = 8000
+const customerUsed: number = 25235
+const totalPlayingTimeMax: number = 18000
+const isItTotalPlaying: boolean = customerUsed > totalPlayingTimeMax ? true : false
+const isDiscount: number = isItTotalPlaying ? 15/100 : 0
+
+console.log(`Charging Bill per Hour: Rp${chargingBill}`)
+console.log(`Customer used for 7 Hours dan 35 Minutes`)
+console.log(`Bill Charge: Rp${chargingBill * customerUsed}`)
+console.log(`Is the Customers get discount: ${isItTotalPlaying}`)
+console.log(`Final Payment: Rp${chargingBill * customerUsed - (chargingBill * customerUsed * isDiscount)}`)

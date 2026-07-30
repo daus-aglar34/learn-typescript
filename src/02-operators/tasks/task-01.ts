@@ -14,3 +14,15 @@
  *  - Final payment
  * 2. Display the calculation results.
  */
+
+let totalFriedRice: number = 3 * 18000
+let totalMineralWater: number = 2 * 5000
+let totalFoodDrink: number = totalFriedRice + totalMineralWater
+let studentDiscount: number = 10000
+let totalAmountPrice: number = totalFoodDrink - studentDiscount
+
+
+console.log(`Total Price of Fried Rice: Rp${totalFriedRice}`)
+console.log(`Total Price of Mineral Water: Rp${totalMineralWater}`)
+console.log(`Total Price before discount: Rp${totalFoodDrink}`)
+console.log(`Final amount to be paid: Rp${totalAmountPrice}`)

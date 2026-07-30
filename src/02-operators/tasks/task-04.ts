@@ -22,3 +22,15 @@
  *  - Calculate the final payment.
 
  */
+
+const priceProduct1: number = 850000
+const priceProduct2: number = 275000 * 2
+const priceProduct3: number = 120000 * 1
+
+let totalProduct: number = priceProduct1 + priceProduct2 + priceProduct3
+let isDiscountCustomers: boolean = totalProduct > 1000000 ? true : false
+let discountCustomers: number = isDiscountCustomers == true ? 10/100 : 0
+console.log(`Subtotal: Rp${totalProduct}`)
+console.log(`Disc 10% if total purchase exceeds Rp1000000`)
+console.log(`Is it Customer receive Discount? ${isDiscountCustomers}`)
+console.log(`Final Payment: ${totalProduct - (totalProduct * discountCustomers)}`)

@@ -33,3 +33,23 @@
  * - Calculate the remaining scholarship budget.
  * - Display whether the student is accepted.
  */
+
+const studentName: string = "Alya Putri"
+const studentGPA: number = 3.89
+const familyIncome: number = 4200000
+const competitionCount: number = 4
+const hasDisciplinaryRecord: boolean = false
+const documentsComplete: boolean = true
+
+const totalBudget: number = 500000000
+
+const isAccepted: boolean = (studentGPA >= 3.75) && (familyIncome <= 5000000) && (competitionCount >= 3) && (hasDisciplinaryRecord === false) && (documentsComplete === true)
+
+const awardAmount: number = isAccepted ? 12000000 : 0
+const remainingBudget: number = totalBudget - awardAmount
+
+console.log("====Hasil Seleksi====")
+console.log(`Student Name: ${studentName}`)
+console.log(`Status Kelulusan: ${isAccepted ? "Diterima" : "Ditolak"}`)
+console.log(`Nominal Beasiswa ${awardAmount}`)
+console.log(`Sisa Anggaran: Rp${remainingBudget}`)

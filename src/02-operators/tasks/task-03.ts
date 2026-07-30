@@ -17,3 +17,13 @@
  * - Bonus
  * - Final salary
  */
+
+let basicSalary: number = 5000000
+const overTimeHours: number = 12
+let overTimeRate: number = 50000
+let overTimePay: number = overTimeRate * overTimeHours
+let bonus: number = overTimeHours > 10 ? 300000 : 0
+
+console.log(`Overtime Pay: ${overTimePay}`)
+console.log(`Bonus: ${bonus}`)
+console.log(`Final Salary: ${basicSalary + bonus + overTimePay}`)
