@@ -20,17 +20,26 @@ type productType = {
     productCode: string
     productPrice: number
     stockAvalaible: number
+    planBuy: number
 }
 const productTypeTech: productType = {
     productName: `Mechanical Keyboard RGB`,
     productCode: `KBR-001`,
-    productPrice: 85000,
-    stockAvalaible: 18
+    productPrice: 850000,
+    stockAvalaible: 18,
+    planBuy: 20
 }
-const discountFlashSale: number = 25/100
-const buyPlan: number = 2
+
+
 
 console.log(`Product Name : ${productTypeTech.productName}`)
 console.log(`Product Code : ${productTypeTech.productCode}`)
 console.log(`Product Price : ${productTypeTech.productPrice}`)
 console.log(`Product Name : ${productTypeTech.stockAvalaible}`)
+const discount: number = 0.25
+if (productTypeTech.stockAvalaible < productTypeTech.planBuy){
+    console.log("Product not Available")
+} else {
+    const subTotal: number = productTypeTech.productPrice * productTypeTech.planBuy - (productTypeTech.productPrice * discount)
+    console.log(`Total Payment: ${subTotal}`)
+}

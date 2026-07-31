@@ -5,8 +5,8 @@ Registration Process
 
 Step 1 — Academic Status
 The student must:
- - Be actively enrolled.
- - Have completed tuition payment.
+- Be actively enrolled.
+- Have completed tuition payment.
 
 If either requirement is not satisfied:
 Registration Rejected
@@ -45,3 +45,34 @@ Student Tasks
 - Use nested conditional statements.
 - Display the final registration result.
  */
+
+const studentName: string = "Nadia Putri"
+const activeStudent: boolean = true
+const tuitionPaid: boolean = true
+const passedProgrammingFundamentals: boolean = true
+const passedDatabaseSystems: boolean = true
+const studentGPA: number = 3.45
+const seatsAvailable: boolean = false
+
+console.log(`Student Name: ${studentName}`)
+console.log(`Active Student: ${activeStudent ? "Yes" : "No"}`)
+console.log(`Tuition Paid: ${tuitionPaid ? "Done" : "Not yet"}`)
+console.log(`Passed Programming Fundamentals: ${passedProgrammingFundamentals ? "Done" : "Not yet"}`)
+console.log(`Passed Database System: ${passedDatabaseSystems ? "Done" : "Not yet"}`)
+console.log(`Student GPA: ${studentGPA}`)
+console.log(`Seats Available: ${seatsAvailable ? "Available" : "Not Available"}`)
+
+
+if(activeStudent && tuitionPaid){
+    if (passedProgrammingFundamentals && passedDatabaseSystems && studentGPA >= 3.20){
+        if(seatsAvailable){
+            console.log("Registration Succesfull")
+        } else {
+            console.log("Added to Waiting List")
+        }
+    } else {
+        console.log("Academic Requirements Not Met")
+    }
+} else {
+    console.log("Registration Rejected")
+}

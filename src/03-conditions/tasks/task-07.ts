@@ -30,3 +30,32 @@
  * 2. Implement both screening stages.
  * 3. Display the loan decision.
  */
+
+const applicantName: string = "Andi Wijaya"
+const applicantMonthlyIncome: number = 10000000
+const creditScore: number = 725
+const existingDebt: number = 2500000
+const permanentEmployee: boolean = true
+
+console.log(`Applicant Name: ${applicantName}`)
+console.log(`Applicant Monthly Income: ${applicantMonthlyIncome}`)
+console.log(`Applicant Credit Score: ${creditScore}`)
+console.log(`Applicant Existing Debt: Rp${existingDebt}`)
+console.log(`Is he/she Permanent Employee: ${permanentEmployee ? "Yes" : "No"}`)
+console.log("")
+console.log("Evaluates Loan Application....")
+
+if (applicantMonthlyIncome > 8000000 && creditScore > 700){
+    console.log("Pass First Screening...")
+    console.log("Checking for Second Screening...")
+    if (existingDebt < (applicantMonthlyIncome * 0.3) && permanentEmployee){
+        console.log("Passed First and Second Screening...")
+        console.log("Loan Approved...")
+    } else {
+        console.log("Passed First Screening but Failed in Second Screening...")
+        console.log("Manual Review...")
+    }
+} else {
+    console.log("Failed in both Screening...")
+    console.log("Loan Rejected...")
+}
